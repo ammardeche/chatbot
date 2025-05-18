@@ -8,15 +8,19 @@
     >
     <select
       id="language"
+      [(ngModel)]="selectedLanguage"
       class="w-full border border-gray-300 rounded-lg px-4 py-2 mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500"
     >
       <option value="">Select Language</option>
-      <!-- You can add *ngFor here later -->
+      @for (lang of getLanguages(); track $index) {
+      <option>{{ lang.name }}</option>
+      }
     </select>
 
     <a>
       <button
         [routerLink]="['/layout/level']"
+        (click)="SetLanguage()"
         class="w-full cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition duration-200"
       >
         Next

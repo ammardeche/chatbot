@@ -9,6 +9,7 @@
 
     <form>
       <div class="space-y-4 mb-6">
+        @for (lvl of getLevels(); track $index) {
         <label class="flex items-center space-x-3">
           <input
             type="radio"
@@ -17,26 +18,9 @@
             class="accent-blue-600"
             checked
           />
-          <span>Beginner</span>
+          <span>{{ lvl.name }}</span>
         </label>
-        <label class="flex items-center space-x-3">
-          <input
-            type="radio"
-            name="level"
-            value="intermediate"
-            class="accent-blue-600"
-          />
-          <span>Intermediate</span>
-        </label>
-        <label class="flex items-center space-x-3">
-          <input
-            type="radio"
-            name="level"
-            value="advanced"
-            class="accent-blue-600"
-          />
-          <span>Advanced</span>
-        </label>
+        }
       </div>
 
       <button
