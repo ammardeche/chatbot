@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { levels } from '../../modules/levels';
 import { FormsModule } from '@angular/forms';
+import { LevelServiceService } from '../../service/level-service.service';
 
 @Component({
   selector: 'app-level',
@@ -13,11 +14,12 @@ export class LevelComponent {
   private levels = levels;
   selectedLevel: string = '';
 
-  constructor() {}
+  constructor(private levelService: LevelServiceService) {}
   getLevels() {
     return this.levels;
   }
   SetLevel() {
+    this.levelService.setLevel(this.selectedLevel);
     console.log(this.selectedLevel);
   }
 }

@@ -7,29 +7,28 @@
       Select your proficiency level to begin
     </p>
 
-    <form>
-      <div class="space-y-4 mb-6">
-        @for (lvl of getLevels(); track $index) {
-        <label class="flex items-center space-x-3">
-          <input
-            type="radio"
-            name="level"
-            value="beginner"
-            class="accent-blue-600"
-            checked
-          />
-          <span>{{ lvl.name }}</span>
-        </label>
-        }
-      </div>
+    <div class="space-y-4 mb-6">
+      @for (lvl of getLevels(); track $index) {
+      <label class="flex items-center space-x-3">
+        <input
+          type="radio"
+          name="level"
+          class="accent-blue-600"
+          [value]="lvl.name"
+          [(ngModel)]="selectedLevel"
+          (change)="SetLevel()"
+        />
+        <span>{{ lvl.name }}</span>
+      </label>
+      }
+    </div>
 
-      <button
-        [routerLink]="['/layout/chat']"
-        type="submit"
-        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition duration-200"
-      >
-        Start Chat
-      </button>
-    </form>
+    <button
+      [routerLink]="['/layout/chat']"
+      type="submit"
+      class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition duration-200"
+    >
+      Start Chat
+    </button>
   </div>
 </div>
