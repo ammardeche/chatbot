@@ -1,0 +1,51 @@
+<div class="flex items-center justify-center min-h-screen bg-gray-100 p-4">
+  <div class="bg-white shadow-md rounded-lg p-8 w-full max-w-sm">
+    <h2 class="text-xl font-bold text-gray-800 mb-2 text-center">
+      Select your Level
+    </h2>
+    <p class="text-gray-500 mb-6 text-center">
+      Select your proficiency level to begin
+    </p>
+
+    <form>
+      <div class="space-y-4 mb-6">
+        <label class="flex items-center space-x-3">
+          <input
+            type="radio"
+            name="level"
+            value="beginner"
+            class="accent-blue-600"
+            checked
+          />
+          <span>Beginner</span>
+        </label>
+        <label class="flex items-center space-x-3">
+          <input
+            type="radio"
+            name="level"
+            value="intermediate"
+            class="accent-blue-600"
+          />
+          <span>Intermediate</span>
+        </label>
+        <label class="flex items-center space-x-3">
+          <input
+            type="radio"
+            name="level"
+            value="advanced"
+            class="accent-blue-600"
+          />
+          <span>Advanced</span>
+        </label>
+      </div>
+
+      <button
+        [routerLink]="['/layout/chat']"
+        type="submit"
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition duration-200"
+      >
+        Start Chat
+      </button>
+    </form>
+  </div>
+</div>

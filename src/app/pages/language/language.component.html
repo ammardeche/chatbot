@@ -1,0 +1,26 @@
+<div class="flex items-center justify-center min-h-screen bg-gray-100 p-4">
+  <div class="bg-white shadow-md rounded-lg p-8 w-full max-w-sm">
+    <h1 class="text-2xl font-bold text-gray-800 mb-2">Welcome to LinguaBot</h1>
+    <p class="text-gray-500 mb-6">Choose a language to start learning</p>
+
+    <label for="language" class="block text-sm font-medium text-gray-700 mb-1"
+      >Language</label
+    >
+    <select
+      id="language"
+      class="w-full border border-gray-300 rounded-lg px-4 py-2 mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    >
+      <option value="">Select Language</option>
+      <!-- You can add *ngFor here later -->
+    </select>
+
+    <a>
+      <button
+        [routerLink]="['/layout/level']"
+        class="w-full cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition duration-200"
+      >
+        Next
+      </button>
+    </a>
+  </div>
+</div>
