@@ -14,4 +14,7 @@ export class LanguageServiceService {
   setLanguage(language: string) {
     this.getLanguagesSubject.next(language);
   }
+  getSelectedLanguage() {
+    return this.getLanguagesSubject.getValue();
+  }
 }

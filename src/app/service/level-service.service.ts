@@ -10,5 +10,8 @@ export class LevelServiceService {
   setLevel(level: string) {
     this.getLevelsSubject.next(level);
   }
+  getSelectedLevel() {
+    return this.getLevelsSubject.getValue();
+  }
   constructor() {}
 }

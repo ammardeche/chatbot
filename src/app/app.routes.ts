@@ -3,6 +3,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { LanguageComponent } from './pages/language/language.component';
 import { LevelComponent } from './pages/level/level.component';
 import { ChatComponent } from './pages/chat/chat.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 export const routes: Routes = [
   {
@@ -12,6 +13,7 @@ export const routes: Routes = [
       { path: '', component: LanguageComponent },
       { path: 'level', component: LevelComponent },
       { path: 'chat', component: ChatComponent },
+      { path: 'contact', component: ContactComponent },
     ],
   },
 
