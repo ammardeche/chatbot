@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class ChatServiceService {
   private apiUrl = 'https://openrouter.ai/api/v1/chat/completions'; // OpenRouter endpoint
   private apiKey =
-    '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';
+    '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';
 
   sendMessage(
     userMessage: string,
